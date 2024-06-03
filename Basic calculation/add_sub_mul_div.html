@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3 id="add"></h3>
+    <h3 id="sub"></h3>
+    <h3 id="mul"></h3>
+    <h3 id="divi"></h3>
+
+
+
+
+    <script>
+        var a = parseInt(prompt("Enter Your Max. Number A"));
+        var b = parseInt(prompt("Enter Your Min. Number B"));
+
+        var add = a + b;
+        document.getElementById('add').innerHTML = `Addition is = ${add}`;
+
+        var sub = a - b;
+        document.getElementById('sub').innerHTML = `Subtraction is = ${sub}`;
+
+        var mul = a * b;
+        document.getElementById('mul').innerHTML = `Multiplication is = ${mul}`;
+
+        var divi = a / b;
+        document.getElementById('divi').innerHTML = `Division is = ${divi}`; 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="cel"></h3>
+    <h3 id="fer"></h3>
+
+
+
+
+
+    <script>
+        var c = parseInt(prompt("Enter Your Temperature In celsius"));
+        var f = c * (9 / 5) + 32;
+
+        document.getElementById('cel').innerHTML = `Temperature in Celsius = ${c}`;
+        document.getElementById('fer').innerHTML = `Temperature in Fahrenheit = ${f}`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="len"></h3>
+    <h3 id="hei"></h3>
+    <h2 id="ans" style="color: blueviolet;"></h2>
+
+
+
+
+    <script>
+        var b = parseInt(prompt("Enter Triangle's base Length"));
+        var h = parseInt(prompt("Enter Triangle's Heigth"));
+
+        var ans = 0.5 * b * h;
+
+        document.getElementById('len').innerHTML = `Triangle Base Length is ${b}`;
+        document.getElementById('hei').innerHTML = `Triangle Heigth is ${h}`;
+        document.getElementById('ans').innerHTML = `Triangle Area is ${ans}`;
+    </script>
+</body>
+</html>

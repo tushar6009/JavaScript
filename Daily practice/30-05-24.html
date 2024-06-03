@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Detail</title>
+    <style> 
+         .resume table {
+            background-color: aqua;
+            margin-top: 20px;
+         }
+         table tr td {
+            padding: 20px;
+         }
+    </style>
+</head>
+
+<body>
+    <h2 align="center">Personal Details</h2>
+    <div class="resume">
+        <table width="1140px" , align="center">
+            <tr>
+                <td>
+                    Name :-
+                </td>
+                <td id="name"></td>
+            </tr>
+            <tr>
+                <td>
+                    Age :-
+                </td>
+                <td id="age"></td>
+            </tr>
+            <tr>
+                <td>
+                    Email :-
+                </td>
+                <td id="email"></td>
+            </tr>
+            <tr>
+                <td>
+                    Gender :-
+                </td>
+                <td id="gender"></td>
+            </tr>
+            <tr>
+                <td>
+                    Phone number :-
+                </td>
+                <td id="phone"></td>
+            </tr>
+            <tr>
+                <td>
+                    City :-
+                </td>
+                <td id="city"></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+<script>
+
+    // let name = 'Tushar';
+    // let age = '25';
+    // let email = 'tushar@gmail.com';
+    // let gender = 'Male';
+    // let phone = '1234567890';
+    // let city = 'Surat';
+
+    let name = prompt("Enter your name:");
+    let age = prompt("Enter your age:");
+    let email = prompt("Enter your email:");
+    let gender = prompt("Enter your gender:");
+    let phone = prompt("Enter your phone number:");
+    let city = prompt("Enter your city:");
+
+    document.getElementById('name').innerHTML = name;
+    document.getElementById('age').innerHTML = age;
+    document.getElementById('email').innerHTML = email;
+    document.getElementById('gender').innerHTML = gender;
+    document.getElementById('phone').innerHTML = phone;
+    document.getElementById('city').innerHTML = city;
+</script>
+
+</html>

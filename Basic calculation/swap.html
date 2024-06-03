@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="color: blueviolet;">Before Swapping</h2>
+    <h3 id="a"></h3>
+    <h3 id="b"></h3>
+
+    <h2 style="color: blueviolet;">After Swapping</h2>
+    <h3 id="c"></h3>
+    <h3 id="d"></h3>
+
+
+
+
+
+
+    <script>
+        var a = parseInt(prompt("Enter Value of A"));
+        var b = parseInt(prompt("Enter Value of B"));
+        var c;
+
+        //Before Swapping
+        document.getElementById('a').innerHTML = `Value of A is ${a}`;
+        document.getElementById('b').innerHTML = `Value of B is ${b}`;
+
+        //After swapping
+        c = a;
+        a = b;
+        b = c;
+
+        document.getElementById('c').innerHTML = `Value of A is ${a}`;
+        document.getElementById('d').innerHTML = `Value of B is ${b}`;
+
+    </script>
+</body>
+</html>

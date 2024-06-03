@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="sal"></h3>
+    <h3 id="hra"></h3>
+    <h3 id="da"></h3>
+    <h3 id="ta"></h3>
+    <h2 id="gross" style="color: blueviolet;"></h2>
+
+
+
+    <script>
+        var salary = parseInt(prompt("Enter Your Base Salary"));
+        var HRA = 10, DA = 5, TA = 8;
+
+        var hra = salary * HRA / 100;
+        var da = salary * DA / 100;
+        var ta = salary * TA / 100;
+
+        gross = salary + hra + da + ta;
+
+        document.getElementById('sal').innerHTML = `Your Salary is ${salary}`;
+        document.getElementById('hra').innerHTML = `Your House Rent Allowance is ${hra}`;
+        document.getElementById('da').innerHTML = `Your Dearness Allowance is ${da}`;
+        document.getElementById('ta').innerHTML = `Your Travelling Allowance is ${ta}`;
+        document.getElementById('gross').innerHTML = `Your Gross Salary is ${gross}`;
+        
+    </script>
+</body>
+</html>
