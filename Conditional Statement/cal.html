@@ -1,0 +1,37 @@
+<script type="text/javascript">
+
+
+
+    var a = parseFloat(prompt("Enter the first number (a):"));
+    var b = parseFloat(prompt("Enter the second number (b):"));
+    var choice = prompt("Enter your choice (+, -, *, /):");
+
+    var ans;
+
+
+    switch (choice) {
+        case '+':
+            ans = a + b;
+            document.write(`${a} + ${b} = ${ans}`);
+            break;
+        case '-':
+            ans = a - b;
+            document.write(`${a} - ${b} = ${ans}`);
+            break;
+        case '*':
+            ans = a * b;
+            document.write(`${a} * ${b} = ${ans}`);
+            break;
+        case '/':
+            if (b !== 0) {
+                ans = a / b;
+                document.write(`${a} / ${b} = ${ans}`);
+            } else {
+                document.write("Division by zero is not allowed.");
+            }
+            break;
+        default:
+            document.write("Please enter a valid choice (+, -, *, /)");
+    }
+
+</script>

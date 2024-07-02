@@ -1,0 +1,18 @@
+<script type="text/javascript">
+
+
+    var angle1 = parseFloat(prompt("Enter the first angle (in degrees):"));
+    var angle2 = parseFloat(prompt("Enter the second angle (in degrees):"));
+    var angle3 = parseFloat(prompt("Enter the third angle (in degrees):"));
+
+
+    var sumOfAngles = angle1 + angle2 + angle3;
+
+
+    if (sumOfAngles === 180) {
+        document.write(`<p>Angles ${angle1}, ${angle2}, and ${angle3} can form a valid triangle.</p>`);
+    } else {
+        document.write(`<p>Angles ${angle1}, ${angle2}, and ${angle3} cannot form a valid triangle.</p>`);
+    }
+    
+</script>
