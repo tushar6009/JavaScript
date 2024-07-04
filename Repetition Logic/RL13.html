@@ -1,0 +1,16 @@
+<script type="text/javascript">
+
+
+    const number = parseInt(prompt('Enter the number : '));
+    let n1 = 0, n2 = 1, next;
+
+    console.log('Fibonacci Series:');
+
+    for (let i = 1; i <= number; i++) {
+        document.write(n1);
+        document.write("<br>");
+        next = n1 + n2;
+        n1 = n2;
+        n2 = next;
+    }
+</script>
