@@ -1,0 +1,22 @@
+<script type="text/javascript">
+
+
+    validate = () => {
+
+        let age = parseInt(prompt("Enter your age"));        
+        let ans;
+
+        if (age >= 18) {
+            ans = "You are eligible for vote";
+        }else {
+            ans = "You are not eligible for vote";
+        }
+        return (ans);
+
+    }
+
+    let eligibilityMessage = validate();
+    document.write(eligibilityMessage);
+
+
+</script>

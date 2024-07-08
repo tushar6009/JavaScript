@@ -1,0 +1,32 @@
+<script type="text/javascript">
+
+    let operator = prompt('Enter operator (either +, -, * or /): ');
+    let num1 = parseInt(prompt('Enter large number: '));
+    let num2 = parseInt(prompt('Enter small number: '));
+
+    let ans;
+
+    switch (operator) {
+        case '+':
+            ans = num1 + num2;
+            break;
+        case '-':
+            ans = num1 - num2;
+            break;
+        case '*':
+            ans = num1 * num2;
+            break;
+        case '/':
+            ans = num1 / num2;
+            break;
+        default:
+            document.write('Invalid');
+            break;
+    }
+
+    if (typeof ans !== 'undefined') {
+        document.write(`${num1} ${operator} ${num2} = ${ans}`);
+    }
+
+
+</script>

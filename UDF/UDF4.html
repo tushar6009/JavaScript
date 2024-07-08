@@ -1,0 +1,28 @@
+<script type="text/javascript">
+
+    greaterNumber = (no1, no2, no3, no4) => {
+        var greatest;
+
+        greatest = no1;
+
+        if (no2 > greatest) {
+            greatest = no2;
+        }
+        if (no3 > greatest) {
+            greatest = no3;
+        }
+        if (no4 > greatest) {
+            greatest = no4;
+        }
+
+        document.write(`The greatest number is: ${greatest}`);
+    }
+
+    var no1 = parseInt(prompt("Enter First Number "));
+    var no2 = parseInt(prompt("Enter Second Number "));
+    var no3 = parseInt(prompt("Enter Third Number "));
+    var no4 = parseInt(prompt("Enter Four Number "));
+    
+    greaterNumber(no1, no2, no3, no4);
+
+</script>

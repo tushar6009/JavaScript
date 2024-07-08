@@ -1,0 +1,21 @@
+<script type="text/javascript">
+
+    swapNumber = (a,b) => {
+
+        document.write(`Before swapping : First number = ${a}, Second number = ${b}`);
+        document.write("<br>")
+
+        let c = a;
+        a = b;
+        b = c;
+
+        document.write(`After swapping : First number = ${a}, Second number = ${b}`);
+
+    }
+    let a = parseInt(prompt("Enter first number :"));
+    let b = parseInt(prompt("Enter second number :"));
+
+    swapNumber(a,b);
+
+
+</script>
