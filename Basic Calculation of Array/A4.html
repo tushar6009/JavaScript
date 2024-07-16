@@ -1,0 +1,21 @@
+<script type="text/javascript">
+
+    let arr = [1, 2, 3, 10, 9, 12, 2, 3];
+    let dup = {};
+
+    for (let i = 0; i < arr.length; i++) {
+        
+        if (dup[arr[i]] !== undefined) {
+            dup[arr[i]]++;
+        } else {
+            dup[arr[i]] = 1;
+        }
+    }
+
+    for (let num in dup) {
+        if (dup[num] > 1) {
+            document.write("Duplicate element found: ", num, "<br>");
+        }
+    }
+
+</script>
