@@ -1,0 +1,111 @@
+<table align="center" border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>City</th>
+            <th>Salary</th>
+            <th>Designation</th>
+            <th>Department</th>
+        </tr>
+    </thead>
+    <tbody id="data">
+
+    </tbody>
+</table>
+<br>
+<div id="salarySum" align="center"></div>
+
+
+<script type="text/javascript">
+
+    let obj = [
+        {
+            id : 1,
+            name : "ashish",
+            email : "ashu@gmail.com",
+            phone : "1121212",
+            city : "surat",
+            salary : "20000",
+            degi : "senior",
+            dep : "programming"
+        },
+        {
+            id : 2,
+            name : "hari",
+            email : "hari@gmail.com",
+            phone : "5454545",
+            city : "surat",
+            salary : 22000,
+            degi : "junior",
+            dep : "ui/ux",
+        },
+        {
+            id : 3,
+            name : "raj",
+            email : "raj@gmail.com",
+            phone : "454545",
+            city : "vadodara",
+            salary : 25000,
+            degi : "junior",
+            dep : "bde",
+        },
+        {
+            id : 4,
+            name : "deep",
+            email : "deep@gmail.com",
+            phone : "565656",
+            city : "vapi",
+            salary : 30000,
+            degi : "tl",
+            dep : "webdesign",
+        },
+        {
+            id : 5,
+            name : "jay",
+            email : "jay@gmail.com",
+            phone : "5565656",
+            city : "rajkot",
+            salary : 20000,
+            degi : "senior",
+            dep : "programming",
+        },
+        {
+            id : 6,
+            name : "ajay",
+            email : "ajay@gmail.com",
+            phone : "5565656",
+            city : "vapi",
+            salary : 25000,
+            degi : "manager",
+            dep : "ui/ux",
+        }
+    ]
+
+    let tbl = "";
+    let sum = 0;
+
+    obj.map((val) => {
+        tbl += 
+            `
+            <tr>
+                <td>${val.id}</td>
+                <td>${val.name}</td>
+                <td>${val.email}</td>
+                <td>${val.phone}</td>
+                <td>${val.city}</td>
+                <td>${val.salary}</td>
+                <td>${val.degi}</td>
+                <td>${val.dep}</td>
+            </tr>
+            `;
+            sum += parseInt(val.salary);
+    })
+    document.getElementById('data').innerHTML = tbl;
+
+    document.getElementById('salarySum').innerText = `Total Salary Sum: ${sum}`;
+
+
+</script>

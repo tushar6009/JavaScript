@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+
+<body>
+    <h1 align="center">Form Validation</h1>
+    <div align="center">
+
+        <form>
+            Name : <input type="text" id="name">
+            <span id="nameError" style="color:red"></span><br><br>
+            Email : <input type="email" id="email">
+            <span id="emailError" style="color:red"></span><br><br>
+            Password : <input type="password" id="password">
+            <span id="passwordError" style="color:red"></span><br><br>
+            Phone : <input type="phone" id="phone">
+            <span id="phoneError" style="color:red"></span><br><br>
+            City : <input type="text" id="city">
+            <span id="cityError" style="color:red"></span><br><br>
+            State : <input type="text" id="state">
+            <span id="stateError" style="color:red"></span><br><br>
+
+            <input type="button" onclick="validateForm()" value="submit">
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+
+    const validateForm = () => {
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        let phone = document.getElementById('phone').value;
+        let city = document.getElementById('city').value;
+        let state = document.getElementById('state').value;
+
+
+        document.getElementById('nameError').innerHTML = "";
+        document.getElementById('emailError').innerHTML = "";
+        document.getElementById('passwordError').innerHTML = "";
+        document.getElementById('phoneError').innerHTML = "";
+        document.getElementById('cityError').innerHTML = "";
+        document.getElementById('stateError').innerHTML = "";
+
+
+        let check = 0;
+
+        if (!name) {
+            document.getElementById('nameError').innerHTML = "Enter your name";
+            check = 1;
+        }
+        if (!email) {
+            document.getElementById('emailError').innerHTML = "Enter your email";
+            check = 1;
+        }
+        if (!password) {
+            document.getElementById('passwordError').innerHTML = "Enter your password";
+            check = 1;
+        }
+        if (!phone) {
+            document.getElementById('phoneError').innerHTML = "Enter your phone";
+            check = 1;
+        }
+        if (!city) {
+            document.getElementById('cityError').innerHTML = "Enter your city";
+            check = 1;
+        }
+        if (!state) {
+            document.getElementById('stateError').innerHTML = "Enter your state";
+            check = 1;
+        }
+
+
+        if (check) {
+            return false;
+        } else {
+            alert("Form submitted successfully!");
+        }
+
+    }
+
+</script>
