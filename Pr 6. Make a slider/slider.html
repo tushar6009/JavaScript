@@ -28,7 +28,7 @@
             email : "ashu@gmail.com",
             phone : "1121212",
             city : "surat",
-            salary : "20000",
+            salary : 20000,
             degi : "senior",
             dep : "programming"
         },
@@ -84,10 +84,13 @@
         }
     ]
 
+    let filterRecord = obj.filter((val) => val.salary === 20000);
+
+
     let tbl = "";
     let sum = 0;
 
-    obj.map((val) => {
+    filterRecord.map((val) => {
         tbl += 
             `
             <tr>
