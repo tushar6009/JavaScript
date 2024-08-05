@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+</head>
+<body>
+    <script type="text/javascript">
+        class Bank{
+            constructor(acc, name, bal){
+                this.acc = acc;
+                this.name = name;
+                this.bal = bal;
+            }
+            deposite(money){
+                this.bal = this.bal + money;
+                console.log('Your Money is Successfully deposite');
+                this.showBalance();
+            }
+            withdraw(money){
+                if(this.bal > money){
+                    this.bal = this.bal - money;
+                    console.log('Your Money is Successfully Withdraw');
+                    this.showBalance;
+                }else{
+                    console.log('Insufficient Balance');
+                }
+                this.showBalance();
+            }
+            showBalance(){
+                console.log(`Total Balance : ${this.bal}`);
+            }
+        }
+        let bank = new Bank(1234, 'TUSHAR', 5000)
+        let ch;
+        do{
+            ch = parseInt(prompt("Press 1 for deposite Press 2 for withdraw press 3 for total balance Press 0 for Exit"))
+            switch(ch){
+                case 1:
+                    let depo = parseInt(prompt("Enter deposite Amount"));
+                    bank.deposite(depo);
+                    break;
+                case 2:
+                    let withd = parseInt(prompt("Enter withdraw Amount"));
+                    bank.withdraw(withd);
+                    break;
+                case 3:
+                    bank.showBalance();
+                    break;
+                case 0:
+                    console.log('Thank you');
+                    break;
+                default:
+                    alert("Invalid Choise")
+            }
+        }while(ch != 0)
+
+    </script>
+</body>
+</html>
