@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .counter-app {
+            text-align: center;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .controls button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .controls button:hover {
+            background-color: #45a049;
+        }
+        #count {
+            font-size: 24px;
+            padding: 10px;
+            background-color: #ffe0e0;
+            border-radius: 5px;
+            width: 50px;
+        }
+        #reset {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        #reset:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="counter-app">
+        <h1>Counter App</h1>
+        <div class="controls">
+            <button id="decrease">-</button>
+            <span id="count">10</span>
+            <button id="increase">+</button>
+        </div>
+        <button id="reset">Reset</button>
+    </div>
+    
+    <script>
+        let count = 0;
+        let interval;
+        const countSpan = document.getElementById('count');
+        const decreaseButton = document.getElementById('decrease');
+        const increaseButton = document.getElementById('increase');
+        const resetButton = document.getElementById('reset');
+
+        const updateCountDisplay = () => {
+            countSpan.textContent = count;
+        };
+
+        decreaseButton.addEventListener('click', () => {
+            if (count > 0) {
+                count--;
+                updateCountDisplay();
+            }
+        });
+
+        increaseButton.addEventListener('click', () => {
+            count++;
+            updateCountDisplay();
+        });
+
+        resetButton.addEventListener('click', () => {
+            clearInterval(interval);
+            count = 0;
+            updateCountDisplay();
+        });
+
+        updateCountDisplay();
+    </script>
+</body>
+
+</html>
+ 

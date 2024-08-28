@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON form</title>
+</head>
+<body>
+    
+    <div align="center">
+        <h2>Add User</h2>
+        <table>
+            <tr>
+                NAME : <input type="text" id="name"><br><br>
+            </tr>
+            <tr>
+                PHONE : <input type="text" id="phone"><br><br>
+            </tr>
+            <tr>
+                <input type="button" value="Submit" onclick="saveRecord()">
+            </tr>
+        </table>
+        <br>
+        <h2>View Record</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>User id</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody id="user"></tbody>
+        </table>
+    </div>
+
+
+
+    <script type="text/javascript">
+        let record = []
+
+        const viewRecord = () => {
+            let alldata = JSON.parse(localStorage.getItem('user')) ? JSON.parse(localStorage.getItem('user')) : []
+            let tbl = ""
+            alldata.map((val, i) => {
+                tbl += 
+                `
+                    <tr>
+                        <td>${++i}</td>
+                        <td>${val.id}</td>
+                        <td>${val.name}</td>
+                        <td>${val.phone}</td>
+                    </tr>
+                `
+            })
+            document.getElementById('user').innerHTML = tbl;
+        }
+        viewRecord();
+
+        const saveRecord = () =>{
+            let name = document.getElementById('name').value;
+            let phone = document.getElementById('phone').value;
+
+            let obj = {
+                id: Math.floor(Math.random() * 100),
+                name : name,
+                phone : phone
+            }
+
+            if(localStorage.getItem('user') === null || localStorage.getItem('user') === undefined){
+                record.push(obj);
+                localStorage.setItem('user', JSON.stringify(record));
+                alert("Data added");
+                viewRecord();
+            }else{
+                let alldata = JSON.parse(localStorage.getItem('user')) ? JSON.parse(localStorage.getItem('user')) :[]
+                alldata.push(obj);
+                localStorage.setItem('user', JSON.stringify(alldata))
+                alert("Record Added")
+                viewRecord();
+            }
+
+        }
+        
+
+    </script>
+</body>
+</html>
